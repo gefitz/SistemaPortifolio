@@ -1,0 +1,89 @@
+﻿@model MercadoFitz.Models.XmlModel
+@{
+    ViewData["Title"] = "Calcular Nota";
+
+}
+<form method="post" enctype="multipart/form-data" asp-controller="NotaXml" asp-action="CalcularXml">
+    <label for="Selecao-Arquivos" class="btn btn-outline-primary">Selecionar Arquivo</label>
+    <input id="Selecao-Arquivos" type="file" name="arquivos" multiple />
+    <br />
+    <button class="btn btn-outline-secondary">Carregar Xml</button>
+</form>
+@if (Model.Nome.Count > 0)
+{
+    <button class="btn btn-primary" onclick="SalvarProdutos(@Model.Nome.Count)">Salvar</button>
+}
+@if (Model.Nome.Count != 0)
+{
+
+    <table class="table table-hover" id="tabela">
+        <thead>
+            <tr>
+                <th scope="col">Codigo</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Quantidade de Caixas</th>
+                <th scope="col">Quantidade Unitario</th>
+                <th scope="col">Valor Unitario</th>
+                <th scope="col">Valor Total</th>
+                <th scope="col">Porcetagem</th>
+                <th scope="col">Final</th>
+            </tr>
+        </thead>
+
+        @for (int i = 0; i < Model.Nome.Count; i++)
+        {
+
+            <tr id="@i">
+                <td><input class="input-group-text" id="codigo @i" /></td>
+                <td><p id="nome @i">@Model.Nome[i]</p></td>
+                <td>
+                    <p id="tipoItem @i">@Model.TipoItem[i]</p>
+                </td>
+                <td><p id="quant @i">@Model.QuantidadeCX[i]</p></td>
+                <td><input class="input-group-text" id="unitario @i" /></td>
+                <td><p id="valorUnitario @i">@Model.ValorUnitatiro[i]</p></td>
+                <td><p id="valorTotal @i">@Model.ValorTotalCx[i]</p></td>
+
+                <td>
+                    <select class="custom-select" id="inputGroupSelect @i" onchange="CalcXml(this.value, @i)">
+                        <option selected>Porcetagem</option>
+                        <option value="10">10%</option>
+                        <option value="15">15%</option>
+                        <option value="20">20%</option>
+                        <option value="25">25%</option>
+                        <option value="30">30%</option>
+                        <option value="35">35%</option>
+                        <option value="40">40%</option>
+                        <option value="45">45%</option>
+                        <option value="50">50%</option>
+                        <option value="55">55%</option>
+                        <option value="60">60%</option>
+                        <option value="70">70%</option>
+                        <option value="80">80%</option>
+                        <option value="90">90%</option>
+                        <option value="100">100%</option>
+                        <option value="110">110%</option>
+                        <option value="120">120%</option>
+                        <option value="130">130%</option>
+                        <option value="140">140%</option>
+                        <option value="150">150%</option>
+                        <option value="160">160%</option>
+                        <option value="170">170%</option>
+                        <option value="180">180%</option>
+                        <option value="190">190%</option>
+                        <option value="200">200%</option>
+                    </select>
+
+                </td>
+                <td><p id="final @i"></p></td>
+            </tr>
+        }
+    </table>
+
+}
+@if (Model.Nome.Count > 0)
+{
+
+    <button class="btn btn-primary" onclick="SalvarProdutos(@Model.Nome.Count)">Salvar</button>
+}

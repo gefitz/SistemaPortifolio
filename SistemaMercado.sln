@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32602.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaMercado", "SistemaMercado\SistemaMercado.csproj", "{2243CCDE-BDAA-4E57-BACE-A8536CF55129}"
+	ProjectSection(ProjectDependencies) = postProject
+		{57005833-A734-4D53-9930-B44C5533529E} = {57005833-A734-4D53-9930-B44C5533529E}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infraestrutura", "Infraestrutura\Infraestrutura.csproj", "{57005833-A734-4D53-9930-B44C5533529E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2243CCDE-BDAA-4E57-BACE-A8536CF55129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2243CCDE-BDAA-4E57-BACE-A8536CF55129}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2243CCDE-BDAA-4E57-BACE-A8536CF55129}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2243CCDE-BDAA-4E57-BACE-A8536CF55129}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57005833-A734-4D53-9930-B44C5533529E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57005833-A734-4D53-9930-B44C5533529E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57005833-A734-4D53-9930-B44C5533529E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57005833-A734-4D53-9930-B44C5533529E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6DB46FA-FFA5-4817-AD94-B9557A1DCCC4}
+	EndGlobalSection
+EndGlobal
