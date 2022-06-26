@@ -68,11 +68,14 @@ namespace MercadoFitz.Controllers
             return View(model);
 
         }
-        public void SalvarProduto(ProductModel model)
+        public bool SalvarProduto(ProductModel model)
         {
             SalvarProduto salvar = new SalvarProduto();
             ProdutoModel produto = ConvertModel(model);
-            salvar.AddProdutos(produto);
+           bool situacao = salvar.AddProdutos(produto);
+            if (situacao) return true;
+            return false;
+            
         }
         public ProdutoModel ConvertModel(ProductModel model)
         {

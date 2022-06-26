@@ -40,7 +40,7 @@ function SalvarProdutos() {
     /*fazer um json e enviar um por cada dentro do for para controller,controller devera retornar succes*/ 
     var tabela = document.getElementById("tabela");
     var linha = tabela.getElementsByTagName("tr");
-    for (i = 1; i < linha.length; i++) {
+    for (i = 0; i < linha.length; i++) {
         var codigo = document.getElementById('codigo '+ i).value
         var nome = document.getElementById('nome ' + i).innerText
         var quantidadeCaixas = document.getElementById('quant ' + i).innerText
@@ -64,7 +64,7 @@ function SalvarProdutos() {
         $.ajax({
             url: "SalvarProduto",
             method: "POST",
-            data: json
+            data: json,
         })
         
     }
