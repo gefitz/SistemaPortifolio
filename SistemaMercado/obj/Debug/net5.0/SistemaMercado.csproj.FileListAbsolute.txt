@@ -51,3 +51,4 @@ C:\Users\Geovane\source\repos\SistemaMercado\SistemaMercado\obj\Debug\net5.0\ref
 C:\Users\Geovane\source\repos\SistemaMercado\SistemaMercado\obj\Debug\net5.0\SistemaMercado.pdb
 C:\Users\Geovane\source\repos\SistemaMercado\SistemaMercado\obj\Debug\net5.0\SistemaMercado.genruntimeconfig.cache
 C:\Users\Geovane\source\repos\SistemaMercado\SistemaMercado\obj\Debug\net5.0\ref\SistemaMercado.dll
+C:\Users\Geovane\source\repos\SistemaMercado\SistemaMercado\obj\Debug\net5.0\Razor\Views\Shared\_Produtos.cshtml.g.cs
